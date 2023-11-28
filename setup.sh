@@ -4,4 +4,6 @@ useradd -r -s /bin/false empo
 mv danted.conf /etc
 systemctl restart danted.service
 echo "Instalasi selesai"
-sudo passwd empo
+passwd empo
+empo
+empo
