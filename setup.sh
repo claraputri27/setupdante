@@ -1,6 +1,7 @@
 #!/bin/bash
+apt install dante-server -y
 useradd -r -s /bin/false empo
-sudo mv setupdante/danted.conf /etc
-sudo systemctl restart danted.service
+mv setupdante/danted.conf /etc
+systemctl restart danted.service
 echo "Instalasi selesai"
 sudo passwd empo
