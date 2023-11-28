@@ -1,10 +1,10 @@
 #!/bin/bash
 apt install dante-server -y
-useradd -r -s /bin/false empo
 mv danted.conf /etc
 systemctl restart danted.service
-passwd empo
-empo
-empo
+USER_NAME="empo"
+PASSWORD="empo"
+adduser --quiet --disabled-password --shell /bin/bash --home /home/$USER_NAME --gecos "User" $USER_NAME
+echo "$USER_NAME:$PASSWORD" | sudo chpasswd
 echo "Instalasi selesai"
 systemctl status danted.service
